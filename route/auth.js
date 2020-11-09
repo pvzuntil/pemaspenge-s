@@ -1,5 +1,5 @@
 const route = require('express').Router()
-const validationSchema = require('../validation')
+const validationSchema = require('../validation/validation')
 const mvalid = require('../lib/MValid')
 const mres = require('../lib/MRes')
 const User = require('../model/Users')
