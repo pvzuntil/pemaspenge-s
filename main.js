@@ -6,6 +6,7 @@ const authRequire = require('./middleware/middleware');
 
 const authRoute = require('./route/auth');
 const kasRoute = require('./route/kas');
+const catatanRoute = require('./route/catatan');
 
 dotenv.config()
 
@@ -24,5 +25,6 @@ serv.get('/', (req, res) => {
 
 serv.use('/auth', authRoute)
 serv.use('/api/kas', authRequire, kasRoute)
+serv.use('/api/catatan', authRequire, catatanRoute)
 
 serv.listen('3000', () => console.log('RUN !'))
